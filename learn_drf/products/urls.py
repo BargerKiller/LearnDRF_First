@@ -3,9 +3,8 @@ from django.urls import path
 from .views import ProductDetailAPIView, \
     ProductListCreateAPIView, \
     ProductUpdateAPIView, \
-    ProductDeleteAPIView, \
-    ProductMixinView
-from .viewsets import ProductGenericViewSet
+    ProductDeleteAPIView
+
 
 urlpatterns = [
     path('', ProductListCreateAPIView.as_view(), name='product-list'),

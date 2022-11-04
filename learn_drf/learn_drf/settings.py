@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_framework_simplejwt',
 
-
     'api',
     'products',
     'search'
@@ -69,7 +68,6 @@ CORS_ALLOWED_ORIGINS = [
     'https://localhost:8111',
 
 ]
-
 
 TEMPLATES = [
     {
@@ -162,8 +160,8 @@ SIMPLE_JWT = {
 }
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'Your Project API',
-    'DESCRIPTION': 'Your project description',
+    'TITLE': 'First API',
+    'DESCRIPTION': 'Product/Auth API with JWT auth',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
 }

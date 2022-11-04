@@ -20,12 +20,6 @@ class ProductListCreateAPIView(
             content = serializer.validated_data.get('title')
         serializer.save(user=self.request.user, content=content)
 
-    # def get_queryset(self):
-    #     request = self.request
-    #     qs = super().get_queryset()
-    #     if not request.user.is_authenticated:
-    #         return Product.objects.none()
-    #     return qs.filter(user=request.user)
 
 
 class ProductDetailAPIView(
@@ -83,10 +77,3 @@ class ProductMixinView(
 
     def post(self, request, *args, **kwargs):
         return self.create(request, *args, **kwargs)
-    # class ProductDeleteAPIView(generics.RetrieveAPIView):
-#     queryset = Product.objects.all()
-#     serializer_class = ProductSerializer
-
-# class ProductListAPIView(generics.RetrieveAPIView):
-#     queryset = Product.objects.all()
-#     serializer_class = ProductSerializer
